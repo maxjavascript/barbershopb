@@ -84,11 +84,11 @@ body {
   cursor: pointer;
 }
 
-.button + .button {
+.button+.button {
   margin-left: 16px;
 }
 
-.button-all{
+.button-all {
   padding-right: 44px;
   background-image: url("../images/arrow-right.svg");
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 470px;
+  width: 600px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -150,7 +150,7 @@ body {
 }
 
 .navigation-user {
-  max-width: 210px;
+  max-width: 280px;
   margin-left: auto;
 }
 
@@ -282,7 +282,7 @@ body {
 }
 
 .services-item {
- margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 
@@ -559,10 +559,11 @@ body {
 }
 
 /* Link */
- .breadcrumbs-link {
+.breadcrumbs-link {
   color: inherit;
   margin-right: 32px;
 }
+
 .catalog-products {
   display: flex;
 }
@@ -602,7 +603,7 @@ body {
   margin-right: auto;
 }
 
-.card-grid-toggle{
+.card-grid-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
