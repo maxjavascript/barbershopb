@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница</title>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -40,8 +40,42 @@
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M3.09 6L3.577.905 3.662 0h8.676l.086.905L12.909 6h2.724l-.14 1.124-1 8-.11.876H1.617l-.11-.876-1-8L.368 6H3.09zM5.1 6h5.8l-.38-4H5.48L5.1 6zm-1.717 8l-.75-6h10.734l-.75 6H3.383zM8.5 9.5v3h2v-3h-2zm-3 3v-3h2v3h-2z" />
             </svg>
+            <span>2</span>
             <span class="visually-hidden">Корзина</span>
           </a>
+          <div class="popover popover-cart">
+            <button class="popover-close-button button button-light">
+              2
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="popover-content">
+              <h2 class="popover-title">Корзина</h2>
+              <ul class="cart-items-list">
+                <li class="cart-item">
+                  <p class="cart-item-title">Стрижка машинкой</p>
+                  <p class="cart-item-price">800 ₽</p>
+                  <button type="button" class="cart-item-button button">
+                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <p class="cart-item-title">Стрижка усов</p>
+                  <p class="cart-item-price">1200 ₽</p>
+                  <button class="cart-item-button button" type="button">
+                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="navigation-item">
           <a class="navigation-link navigation-link-login" href="#">
@@ -63,7 +97,7 @@
       <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
       <!-- Лого -->
-      <img class="logo" src="./images/logo-full-white.svg" width="367" height="152" alt="Барбершоп «Бородинский».">
+      <img class="logo" src="images/logo-full-white.svg" width="367" height="152" alt="Барбершоп «Бородинский».">
 
       <!-- Преимущества -->
       <section class="advantages">
@@ -94,20 +128,16 @@
           <h2 class="services-title">Популярные услуги</h2>
           <ul class="services-list">
             <li class="services-item">
-              <span class="services-name">Стрижка машинкой</span>
-              <b class="services-price">800 ₽</b>
+              Стрижка машинкой <b class="services-price">800 ₽</b>
             </li>
             <li class="services-item">
-              <span class="services-name">Стрижка усов </span>
-              <b class="services-price">1200 ₽</b>
+              Стрижка усов <b class="services-price">1200 ₽</b>
             </li>
             <li class="services-item">
-              <span class="services-name">Груминг</span>
-              <b class="services-price">400 ₽</b>
+              Груминг <b class="services-price">400 ₽</b>
             </li>
             <li class="services-item">
-              <span class="services-name">Комплексная стрижка</span>
-              <b class="services-price">2300 ₽</b>
+              Комплексная стрижка <b class="services-price">2300 ₽</b>
             </li>
           </ul>
           <a class="button button-all" href="#">Посмотреть все</a>
@@ -117,36 +147,42 @@
         <section class="gallery">
           <h2 class="gallery-title">Фотогалерея</h2>
 
-          <img class="slider-image" src="images/gallery-1.jpg" alt="Примеры работ." width="390" height="250">
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
+          <div class="slider">
+            <div class="slider-wrapper">
+              <img class="slider-image" src="images/gallery-1.jpg" alt="Примеры работ." width="390" height="250">
+              <div class="slider-controls">
+                <button class="slider-button slider-next" type="button">
+                  <span class="visually-hidden">Предыдущее фото</span>
+                </button>
+                <button class="slider-button slider-prev" type="button">
+                  <span class="visually-hidden">Следующее фото</span>
+                </button>
+              </div>
 
-          <ol class="slider-pagination">
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                <span class="visually-hidden">1 фото</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">2 фото</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">3 фото</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">4 фото</span>
-              </button>
-            </li>
-          </ol>
+              <ol class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">4 фото</span>
+                  </button>
+                </li>
+              </ol>
+            </div>
+          </div>
         </section>
       </div>
 
@@ -178,14 +214,16 @@
           <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group appointment-form-date">
 
-              <label class="form-label" for="appointment-date">Дата</label>
+              <label class="form-label" for="appointment-date">
+                Дата</label>
 
 
               <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
             </p>
             <p class="field-group appointment-form-time">
 
-              <label class="form-label" for="appointment-time">Время</label>
+              <label class="form-label" for="appointment-time">
+                Время</label>
 
 
               <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
@@ -215,8 +253,8 @@
     <div class="page-footer-container">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип Барбершоп «Бородинский»."
-          width="187" height="24">
+        <img class="footer-contacts-logo" src="images/logo-footer.svg" width="183" height="21"
+          alt="Логотип Барбершоп «Бородинский».">
         <address class="footer-contacts-address">
           <p class="footer-about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="footer-contacts-address-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -226,9 +264,11 @@
       <section class="newsletter">
         <h2 class="page-footer-title">Получайте лучшие предложения</h2>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email">Email</label>
+
+          <label class="visually-hidden" for="newsletter-email">Email</label>
           <input class="field" placeholder="email@example.com" type="email" name="newsletter-email"
             id="newsletter-email" required>
+
           <button class="button newsletter-button" type="submit">
             <span class="visually-hidden">Отправить</span>
           </button>
